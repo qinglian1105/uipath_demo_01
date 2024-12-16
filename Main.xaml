@@ -381,7 +381,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NSelectItem>
-                <uix:NSelectItem DisplayName="Select Item &quot;grade&quot;" sap:VirtualizedContainerService.HintSize="484,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="C" ScopeIdentifier="f91fa21c-5229-430e-82ab-74827a3ac24c" Version="V4">
+                <uix:NSelectItem DisplayName="Select Item &quot;grade&quot;" sap:VirtualizedContainerService.HintSize="484,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="B" ScopeIdentifier="f91fa21c-5229-430e-82ab-74827a3ac24c" Version="V4">
                   <uix:NSelectItem.Items>
                     <scg:List x:TypeArguments="x:String" Capacity="8">
                       <x:String>Choose...</x:String>
