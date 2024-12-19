@@ -4,13 +4,14 @@
 
 #### **Ⅰ. 目的** 
 研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程中使用Python處理資料。<br>
-不僅如此，使用「Publish」功能，於 UiPath Orchestrator Cloud 定時執行。 
+此外，使用「Publish」功能，發佈於 UiPath Orchestrator Cloud 定時執行。 
 
 #### **Ⅱ. 主要工具**
 UiPath Studio Desktop、UiPath Orchestrator Cloud、Python
 
 #### **Ⅲ. 說明**
-1. 在UiPath Studio開啓Process，創建一個Flowchart，其中新增一個Sequence，Sequence加入Python Scope。<br>
+1. 架構：<br>
+在UiPath Studio開啓Process，創建一個Flowchart，其中新增一個Sequence，Sequence加入Python Scope。<br>
 2. Process主要步驟：<br>
 開啟瀏覽器(Microsoft Edge)，到一個網站( 專案django_demo_01 [詳見](<https://github.com/qinglian1105>)) ，接著輸入帳密登入，於左側side menu點選某一選單，在Form填入資料按鍵執行，將結果存成變數，該變數再由Python程式處理後，返回予Message Box顯示，按「確定」後關閉網頁，完成整個Process自動化，詳見檔案Main.xaml。部份頁面及說明如下：<br><br> 
 【 UiPath Studio - 建立Process 】<br>
@@ -24,10 +25,10 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 將Process發佈(Publish)到 Orchestrator Cloud後，設定Time Trigger，名稱為 tst-01_cron_01 以Cron格式設定時間執行，如下所示：<br>
 ![avatar](./README_png/page_cron_setting.png)<br><br>
 【 Orchestrator Cloud - Jobs畫面 】<br>
-等待所設定時間開始行「tst-01」這個Process ，最近一次執行Job如圖中紅框所示，其status是成功的。<br>
-另外，畫面中可見為MacOS登入Orchestrator Cloud作觸發設定，於另一台電腦 Win 10 上執行Process各個步驟。
+等待所設定時間開始行「tst-01」這個Process ，最近一次執行Job如圖中紅框所示，其status是成功的，如下所示：<br>
 ![avatar](./README_png/page_job_successful.png)<br>
-<br>
+另外，畫面中可見為使用 MacOS 登入Orchestrator Cloud作觸發設定，於另一台電腦 Win 10 上執行Process各個步驟。<br><br>
+
 ---
 
 #### **References**
