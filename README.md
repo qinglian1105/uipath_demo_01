@@ -22,7 +22,7 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 ![avatar](./README_png/page_results.png)<br><br>
 3. Orchestrator Cloud操作：<br>
 【 Orchestrator Cloud - Time Triggers畫面 】<br>
-將Process發佈(Publish)到 Orchestrator Cloud後，設定Time Trigger，名稱為「tst-01_cron_01」以Cron格式設定時間執行，如下所示：<br>
+將Process發佈(Publish)到 Orchestrator Cloud後，設定Time Trigger，名稱為「tst-01_cron_02」直接以Cron格式設定時間執行，如下所示：<br>
 ![avatar](./README_png/page_cron_setting.png)<br><br>
 【 Orchestrator Cloud - Jobs畫面 】<br>
 等待所設定時間開始執行「tst-01」這個Process ，最近一次執行Job的資訊如圖中紅框所示，其state是 Successful，如下所示：<br>
@@ -43,4 +43,4 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 
 [5] [UiPath Documentation](<https://docs.uipath.com/activities/other/latest/developer/python-scope>)
 
-[6] [Orchestrator User Guide](<https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/introduction>)
+[6] [UiPath: Orchestrator User Guide](<https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/introduction>)
