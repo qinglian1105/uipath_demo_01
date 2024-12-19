@@ -27,7 +27,7 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 【 Orchestrator Cloud - Jobs畫面 】<br>
 等待所設定時間開始執行「tst-01」這個Process ，最近一次執行Job的資訊如圖中紅框所示，其state是 Successful，如下所示：<br>
 ![avatar](./README_png/page_job_successful.png)<br>
-另外，畫面中可見為使用 MacOS 登入 Orchestrator Cloud作觸發設定及相關操作，於另一台電腦 Win 10 上依序完成Process各個步驟。<br><br>
+另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10 上，依序完成Process各個步驟。<br><br>
 
 ---
 
