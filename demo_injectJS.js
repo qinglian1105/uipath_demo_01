@@ -1,3 +1,4 @@
+// A simple JS function to get data from web page 
 function js_tst_01(element, b){
 
     var a = "Hi, " + b + "." + "\n Welcome to Django Simple Admin."; 

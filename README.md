@@ -1,6 +1,6 @@
 # **uipath_demo_01**
 
-## **RPA: a simple example of integrating Python and JavaScript With UiPath for web automation**
+## **RPA: a simple example of integrating JavaScript and Python with UiPath for Web Automation**
 
 #### **Ⅰ. 目的** 
 研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br>
@@ -14,7 +14,7 @@ UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python
 2. Process步驟：<br>
 開啟瀏覽器(Microsoft Edge)，到一個網站( 專案django_demo_01 [詳見](<https://github.com/qinglian1105>)) ，接著輸入帳密登入，於左側side menu點選某一選單，在Form填入資料按鍵執行，由JavaScript程式擷取輸入資料及預測結果，再由Python程式編輯內容及寫入CSV檔，然後返回予Message Box顯示，按「確定」後關閉網頁，完成整個Process自動化，詳見檔案 「Main.xaml」、「demo_injectJS.js」、「processing_msg.py」、「predict_report.csv」。部份頁面及說明如下：<br><br> 
 【 UiPath Studio - 建立Process 】<br>
-Sequence中的Activity如下右邊的Outline所示，可見紅底線為「inject Js Script」及「Python Scope」。<br>
+Sequence中的Activity如下圖右邊的Outline所示，其中可見紅底線為「inject Js Script」及「Python Scope」。<br>
 ![avatar](./README_png/page_uipath.png)<br><br>
 【 啓動Process - 執行到最後步驟的頁面 】<br>
 UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變數資料，按「Predict Score」鍵後，將於下方以藍色文字及儀表盤呈現結果(分數、評級)，UiPath安排JavaScript擷取輸入資料及藍色文字存成變數，給予Python程式編輯內容及寫至CSV檔後，再返回予Message Box顯示內容如下圖所示，按「確定」後關閉網頁以完成整個Process自動化過程。<br>
@@ -22,12 +22,14 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 以上，一個簡單Web Automation例子展現UiPath與JavaScript、Python整合。<br><br>
 3. Orchestrator Cloud操作：<br>
 【 Orchestrator Cloud - Time Triggers畫面 】<br>
-將Process發佈(Publish)到 Orchestrator Cloud後，設定Time Trigger，名稱為「tst-09_cron_02」，選擇Account、Machine、Hostname，並直接以Cron格式設定執行時間，如下所示：<br>
+將Process發佈(Publish)到 Orchestrator Cloud後，設定Time Trigger，名稱為「tst-09_cron_02」，選擇Account、Machine、Hostname，並直接以Cron格式設定執行時間，如下圖所示：<br>
 ![avatar](./README_png/page_cron_setting.png)<br><br>
 【 Orchestrator Cloud - Jobs畫面 】<br>
-等待所設定時間開始執行「tst-09」這個Process ，最近一次執行Job的資訊如下圖紅框所示，其state是 Successful。<br>
+等待所設定時間開始執行「tst-09」這個 Process，最近一次執行Job的資訊如下圖紅框所示，其state是 Successful，代表此Job已成功執行。<br>
 ![avatar](./README_png/page_job_successful.png)<br>
-另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10 上 (如上述【 啓動Process - 執行到最後步驟的頁面 】)，依序完成Process各個步驟。<br><br>
+另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10 上 (如上述【 啓動Process - 執行到最後步驟的頁面 】)，依序完成Process各個步驟。
+綜上所述，為發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。
+<br><br>
 
 ---
 
