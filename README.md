@@ -3,7 +3,7 @@
 ## **RPA: a simple example of integrating JavaScript and Python with UiPath for Web Automation**
 
 #### **Ⅰ. 目的** 
-研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br>
+研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br>
 
 #### **Ⅱ. 主要工具**
 UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python
@@ -27,8 +27,8 @@ UiPath執行至此頁面時(選單-信用評分預測)，填完Form的 7 個變�
 【 Orchestrator Cloud - Jobs畫面 】<br>
 等待所設定時間開始執行「tst-09」這個 Process，最近一次執行Job的資訊如下圖紅框所示，其state是 Successful，代表此Job已成功執行。<br>
 ![avatar](./README_png/page_job_successful.png)<br>
-另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10 上 (如上述【 啓動Process - 執行到最後步驟的頁面 】)，依序完成Process各個步驟。
-綜上所述，為發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。
+另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10 上 (如上述【 啓動Process - 執行到最後步驟的頁面 】)，依序完成Process各個步驟。<br>
+綜上所述，Process發佈於 UiPath Orchestrator Cloud 設定時間遠端自動執行。
 <br><br>
 
 ---
