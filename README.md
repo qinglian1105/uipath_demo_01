@@ -3,10 +3,10 @@
 ## **RPA: a simple example of integrating JavaScript and Python with UiPath for Web Automation**
 
 #### **Ⅰ. 目的** 
-研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br>
+研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
 
 #### **Ⅱ. 主要工具**
-UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python
+UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python<br><br>
 
 #### **Ⅲ. 說明**
 1.流程架構<br>
@@ -15,7 +15,7 @@ UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python
 
 (1)第1個Sequence「S_01 - operation on webpages」主要使用「Use Application/Browser」、「inject Js Script」。第2、3個Sequence「S_02 - demo & write CSV」、「S_03 - demo」僅用「Python Scope」。<br>
 
-(2)第1個Sequence「S_01 - operation on webpages」執行結果交由Flow Decision「Score Threshold」，其中之一指標超過門檻值400則執行「S_02 - demo & write CSV」，否則執行「S_03 - demo」。<br>
+(2)第1個Sequence「S_01 - operation on webpages」執行結果交由Flow Decision「Score Threshold」作判斷，預測結果其中之一 score 超過門檻值(設定為 400)則執行「S_02 - demo & write CSV」，否則執行「S_03 - demo」。<br>
 
 【 圖01：UiPath Studio - 建立Process 】<br>
 ![avatar](./README_png/page_process_01.png)<br><br>
@@ -30,20 +30,20 @@ UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 詳見 [專案django_de
 ![avatar](./README_png/page_scorecards.png)<br><br>
 
 (2)第2個Sequence「S_02 - demo & write CSV」<br>
-門檻值超過400，則執行本Sequence，Python程式將處理編輯內容及寫入CSV檔，然後返回予Message Box顯示如【圖03】所示，按「確定」後關閉網頁，完成整個Process自動化。<br>
+超過門檻值(400)，則執行本Sequence，Python程式將編輯內容及寫入CSV檔，然後返回予Message Box顯示如【圖03】所示，按「確定」後關閉網頁，完成整個Process自動化。<br>
 
 【 圖03：Process執行最後畫面 - 高於門檻值 】
 ![avatar](./README_png/page_over_400.png)<br><br>
 
-(3)第3個Sequence「S_03 - demo」
-未達門檻值，則執行本Sequence，同樣由Python程式將處理編輯內容，但不執行寫入CSV檔，然後返回予Message Box顯示如【圖04】所示，按「確定」後關閉網頁，完成整個Process自動化。
+(3)第3個Sequence「S_03 - demo」<br>
+未達門檻值，則執行本Sequence，同樣由Python程式將處理內容，但不執行寫入CSV檔，然後返回予Message Box顯示如【圖04】所示，按「確定」後關閉網頁，完成整個Process自動化。
 <br>
 
 【 圖04：Process執行最後畫面 - 低於門檻值 】
 ![avatar](./README_png/page_under_400.png)<br><br>
 
 
-建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、程式檔「demo_injectJS.js」、「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
+建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、JavaScript程式檔「demo_injectJS.js」、Python程式檔「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
 
 以上，一個簡單Web Automation例子展現UiPath與JavaScript、Python整合。<br><br>
 
