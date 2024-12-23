@@ -1,2 +1,2 @@
 annual_inc_bin,loan_amnt_bin,int_rate_bin,purpose,grade,home_ownership,pub_rec_bankruptcies,score,level
-180000,20000,5.88,7,B,OWN,N,570,Very Good
+180000,20000,5.88,major_purchase,B,OWN,N,570,Very Good
