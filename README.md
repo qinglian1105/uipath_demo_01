@@ -1,17 +1,17 @@
 # **uipath_demo_01**
 
-## **RPA: a simple example of integrating JavaScript and Python with UiPath for Web Automation**
+## **RPA: Implementing an example of integrating JavaScript and Python with UiPath for Web Automation**
 
-#### **Ⅰ. 目的** 
+### **Ⅰ. 目的** 
 研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
 
-#### **Ⅱ. 主要工具**
+### **Ⅱ. 主要工具**
 UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python<br><br>
 
-#### **Ⅲ. 說明**
+### **Ⅲ. 說明**
 __1.流程架構__ <br>
 
-在UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，於之間建立1個Flow Decision，如【圖01】左側所示，Sequence中的Activity如【圖01】右側的Outline所示。其內容說如下：<br>
+UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，於之間建立1個Flow Decision，如【圖01】左側所示，Sequence中的Activity如【圖01】右側的Outline所示。其內容說如下：<br>
 
 (1)Sequence作用<br>
 第1個Sequence「S_01-docker start services」先開啟服務，接著第2個Sequence「S_02-operation on webpages」處理網頁，並將執行結果交由Flow Decision「Score Threshold(400) 」作判斷，超過門檻值執行「S_03-demo & write CSV」，否則執行「S_04-demo」。<br>
@@ -71,11 +71,12 @@ __3.UiPath Orchestrator Cloud 排程執行__ <br>
 另外，畫面中可見為使用 MacOS電腦，登入 Orchestrator Cloud作觸發設定，待設定時間來臨將自動於另一台電腦 Windows 10上( 如上述【圖03】或 圖04】)，依序完成Process各個步驟。<br>
 
 __綜上所述，Process發佈於 UiPath Orchestrator Cloud 設定時間遠端自動執行。__
-<br><br>
+<br><br><br>
+
 
 ---
 
-#### **References**
+### **References**
 
 [1] [RPA教室](<https://www.youtube.com/@RPA-Class>)
 
