@@ -50,6 +50,9 @@
       <x:String>UiPath.Web</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -116,6 +119,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -124,13 +128,13 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="890.6666666666666,670.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="760.6666666666666,670.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart DisplayName="Flowchart_01" sap:VirtualizedContainerService.HintSize="773.3333333333334,422.76" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart DisplayName="Flowchart_01" sap:VirtualizedContainerService.HintSize="778,422.76" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="x:String" Name="jsOutputs" />
         <Variable x:TypeArguments="njl:JObject" Name="jsObj" />
@@ -139,34 +143,26 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <av:Point x:Key="ShapeLocation">495,5</av:Point>
+          <av:Point x:Key="ShapeLocation">485,5</av:Point>
           <av:Size x:Key="ShapeSize">50,50</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">520,55 520,85</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">510,55 510,85</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID3</x:Reference>
+        <x:Reference>__ReferenceID4</x:Reference>
       </Flowchart.StartNode>
       <FlowStep x:Name="__ReferenceID3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">465,85</av:Point>
+            <av:Point x:Key="ShapeLocation">455,185</av:Point>
             <av:Size x:Key="ShapeSize">110,70</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">520,155 520,230</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">510,255 510,310</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="S_01- operation on webpages" sap:VirtualizedContainerService.HintSize="518,2540.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="S_02-operation on webpages" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="annual_inc_bin">
-              <Variable.Default>
-                <Literal x:TypeArguments="x:String">180000</Literal>
-              </Variable.Default>
-            </Variable>
-            <Variable x:TypeArguments="x:String" Name="loan_amnt_bin">
-              <Variable.Default>
-                <Literal x:TypeArguments="x:String">20000</Literal>
-              </Variable.Default>
-            </Variable>
+            <Variable x:TypeArguments="x:String" Default="180000" Name="annual_inc_bin" />
+            <Variable x:TypeArguments="x:String" Default="20000" Name="loan_amnt_bin" />
             <Variable x:TypeArguments="x:String" Default="5.88" Name="int_rate_bin" />
             <Variable x:TypeArguments="x:String" Default="user01" Name="username_01" />
             <Variable x:TypeArguments="p:PythonObject" Name="scriptOutput" />
@@ -540,21 +536,21 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <av:Point x:Key="ShapeLocation">490,230</av:Point>
+                <av:Point x:Key="ShapeLocation">480,310</av:Point>
                 <av:Size x:Key="ShapeSize">60,60</av:Size>
-                <av:PointCollection x:Key="TrueConnector">490,260 410,260 410,325</av:PointCollection>
-                <av:PointCollection x:Key="FalseConnector">550,260 640,260 640,325</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">480,340 410,340 410,375</av:PointCollection>
+                <av:PointCollection x:Key="FalseConnector">540,340 620,340 620,375</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <FlowDecision.True>
               <FlowStep x:Name="__ReferenceID1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">355,325</av:Point>
+                    <av:Point x:Key="ShapeLocation">355,375</av:Point>
                     <av:Size x:Key="ShapeSize">110,70</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="S_02 - demo &amp; write CSV" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="S_03-demo &amp; write CSV" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="p:PythonObject" Name="scriptOutput" />
                     <Variable x:TypeArguments="x:Object" Name="finalOutput" />
@@ -631,11 +627,11 @@
               <FlowStep x:Name="__ReferenceID2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">585,325</av:Point>
+                    <av:Point x:Key="ShapeLocation">565,375</av:Point>
                     <av:Size x:Key="ShapeSize">110,70</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="S_03 - demo" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="S_04-demo" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="p:PythonObject" Name="scriptOutput" />
                     <Variable x:TypeArguments="p:PythonObject" Name="defOutput" />
@@ -714,6 +710,61 @@
       <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
+      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">455,85</av:Point>
+            <av:Size x:Key="ShapeSize">110,70</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">510,155 510,185</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="S_01-docker start services" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Containers - Docker Desktop" sap:VirtualizedContainerService.HintSize="484,718" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="1eb5ab1a-97bc-4ea3-9e5a-127d28220039" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,402.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="416,122.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button Start'" sap:VirtualizedContainerService.HintSize="416,217.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1eb5ab1a-97bc-4ea3-9e5a-127d28220039" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="093b94a9-8913-4630-983d-6be8c6990fc2" ContentHash="xN8FoItOVUegPVVLej-CLw" DesignTimeRectangle="1631, 509, 48, 49" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Containers - Docker Desktop' role='document' /&gt;&lt;ctrl name='Start Show container actions Delete' role='cell' /&gt;&lt;ctrl name='Start' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Containers - Docker Desktop' role='document' /&gt;&lt;ctrl name='Start Show container actions Delete' role='cell' /&gt;&lt;ctrl name='Start' role='push button' automationid='' /&gt;" Guid="d009b53f-e279-4dcf-ac8d-74033f2cf50a" InformativeScreenshot="7853b27c72dc4599e9f7882e14a85668.png" Reference="y8vczlmXaUOvQUC-1NX9Rg/6y6Ek2v0Kkm4AMEMBhyF_w" ScopeSelectorArgument="&lt;wnd app='docker desktop.exe' cls='Chrome_WidgetWin_1' title='Containers - Docker Desktop' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="6, 0, 1908, 1020" ContentHash="AnN5wrnC0UmWI7K5KtApqA" FilePath="C:\\Program Files\\Docker\\Docker\\frontend\\docker desktop.exe" IconBase64="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" InformativeScreenshot="fa018ae005cb58c1219543b0a9a1d138.png" Reference="y8vczlmXaUOvQUC-1NX9Rg/n0jtuDfkp0uuc6jYCVAvuA" Selector="&lt;wnd app='docker desktop.exe' cls='Chrome_WidgetWin_1' title='Containers - Docker Desktop' /&gt;" Title="Containers - Docker Desktop" Version="V1" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID3</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
     </Flowchart>
   </Sequence>
 </Activity>
