@@ -3,7 +3,7 @@
 ## **RPA: Implementing an example of integrating JavaScript and Python with UiPath for Web Automation**
 
 ### **Ⅰ. 目的** 
-研調 RPA (Robotic Process Automation)，實作UiPath來操作網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
+研調 機器人流程自動化 (Robotic Process Automation, RPA)，實作UiPath來操作應用程式及網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
 
 ### **Ⅱ. 主要工具**
 UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python<br><br>
@@ -11,10 +11,10 @@ UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python<br><br>
 ### **Ⅲ. 說明**
 __1.流程架構__ <br>
 
-UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，於之間建立1個Flow Decision，如【圖01】左側所示，Sequence中的Activity如【圖01】右側的Outline所示。其內容說如下：<br>
+UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，於之間建立1個Flow Decision，如【圖01】左側所示，Nodes及Sequence中使用的Activity如【圖01】右側的Outline所示。其內容簡述如下：<br>
 
 (1)Sequence作用<br>
-第1個Sequence「S_01-docker start services」先開啟服務，接著第2個Sequence「S_02-operation on webpages」處理網頁，並將執行結果交由Flow Decision「Score Threshold(400) 」作判斷，超過門檻值執行「S_03-demo & write CSV」，否則執行「S_04-demo」。<br>
+第1個Sequence「S_01-docker start services」先開啟應用程式及相關服務，接著第2個Sequence「S_02-operation on webpages」處理網頁，並將執行結果交由Flow Decision「Score Threshold(400) 」作判斷，超過門檻值執行「S_03-demo & write CSV」，否則執行「S_04-demo」。<br>
 
 (2)主要使用Activity<br>
 第1個Sequence「S_01-docker start services」使用「Use Application/Browser」。<br>
@@ -53,7 +53,7 @@ UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，
 
 建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、JavaScript程式檔「demo_injectJS.js」、Python程式檔「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
 
-__以上，一個簡單Web Automation例子展現UiPath與JavaScript、Python整合。__
+__以上，一個Web Automation例子展現UiPath與JavaScript、Python整合。__
 <br><br>
 
 __3.UiPath Orchestrator Cloud 排程執行__ <br>
