@@ -3,7 +3,7 @@
 ## **RPA: Implementing an example of integrating JavaScript and Python with UiPath for Web Automation**
 
 ### **Ⅰ. 目的** 
-研調 機器人流程自動化 (Robotic Process Automation, RPA)，實作UiPath來操作應用程式及網頁，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
+研調 機器人流程自動化 (Robotic Process Automation, RPA)，實作UiPath來操作「應用程式」及「網頁」，並在其流程(Process)中使用JavaScript擷取內容再由Python處理資料。此外，發佈(Publish)於 UiPath Orchestrator Cloud 設定時間遠端自動執行。<br><br>
 
 ### **Ⅱ. 主要工具**
 UiPath Studio Desktop、UiPath Orchestrator Cloud、JavaScript、Python<br><br>
@@ -28,23 +28,23 @@ UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，�
 __2.流程步驟__ <br>
 
 (1)第1個Sequence「S_01-docker start services」<br>
-UiPath開啟應用程式「Docker Desktop」，啟動相關服務，如：前端網頁、後端API及資料庫…等( 詳見 [專案django_demo_01](<https://github.com/qinglian1105>) )。<br>
+首先，UiPath開啟應用程式「Docker Desktop」，然後啟動相關服務，如：前端網頁、後端API及資料庫…等( 詳見 [專案django_demo_01](<https://github.com/qinglian1105>) )。<br>
 
 (2)第2個Sequence「S_02-operation on webpages」<br>
-UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，如上述專案 ) ，接著輸入帳密登入進入首頁後，於左側side menu點選「信用評分預測(Credit Scorecards)」選單，即進入主要目標頁面如【圖02】所示，填完Form的 7 個變數資料，按「Predict Score」鍵後，將於下方以藍色文字及儀表盤呈現預測結果(分數、評級)，由JavaScript程式擷取輸入資料及預測結果。<br>
-門檻值即預測結果的分數(score)，設定為 400分，Flow Decision「Score Threshold(400) 」將以此作判斷進入哪個Sequence執行。<br>
+UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，如上述專案 ) ，接著輸入帳密登入進入首頁後，於左側side menu點選「信用評分預測(Credit Scorecards)」選單，即進入目標頁面如【圖02】所示，填完Form的 7 個變數資料，點擊按鍵「Predict Score」後，將於下方以藍色文字及儀表盤呈現預測結果(分數、評級)，由JavaScript程式擷取輸入資料及預測結果。<br>
+另外，門檻值即預測結果的分數(score)，設定為 400分，Flow Decision「Score Threshold(400) 」將以此作判斷進入哪個Sequence執行。<br>
 
 【 圖02：主要操作及擷取資料的頁面 】
 ![avatar](./README_png/page_scorecards.png)<br><br>
 
 (3)第3個Sequence「S_03-demo & write CSV」<br>
-輸入變數資料預測分數 570，超過門檻值，則執行本Sequence，Python程式將編輯內容及寫入CSV檔，然後返回予Message Box顯示，如【圖03】所示，按「確定」後關閉網頁，完成整個Process自動化。<br>
+輸入變數資料預測分數 570，超過門檻值，則執行本Sequence，Python程式將編輯內容及寫入CSV檔，然後返回予Message Box顯示，如【圖03】所示，按下「確定」後關閉網頁，完成整個Process自動化。<br>
 
 【 圖03：Process執行最後畫面 - 高於門檻值 】
 ![avatar](./README_png/page_over_400.png)<br><br>
 
 (4)第4個Sequence「S_04-demo」<br>
-輸入變數資料預測分數 388，未達門檻值，則執行本Sequence，同樣由Python程式將處理內容，但 *不會執行* 寫入CSV檔 ，然後返回予Message Box顯示如【圖04】所示，按「確定」後關閉網頁，完成整個Process自動化。
+輸入變數資料預測分數 388，未達門檻值，則執行本Sequence，同樣由Python程式將處理內容，但 *不會執行* 寫入CSV檔 ，然後返回予Message Box顯示如【圖04】所示，按下「確定」後關閉網頁，完成整個Process自動化。
 <br>
 
 【 圖04：Process執行最後畫面 - 低於門檻值 】
@@ -54,7 +54,7 @@ UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，
 建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、JavaScript程式檔「demo_injectJS.js」、Python程式檔「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
 
 __以上，一個Web Automation例子展現UiPath與JavaScript、Python整合。__ <br>
-(相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 請參考。)
+(相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 請參考)
 <br><br><br>
 
 __3.UiPath Orchestrator Cloud 排程執行__ <br>
