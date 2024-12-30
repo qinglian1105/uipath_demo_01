@@ -28,7 +28,7 @@ UiPath Studio開啓Process，創建1個Flowchart，其中新增4個Sequence，�
 __2.流程步驟__ <br>
 
 (1)第1個Sequence「S_01-docker start services」<br>
-首先，UiPath開啟應用程式「Docker Desktop」，然後啟動相關服務，如：前端網頁、後端API及資料庫…等( 詳見 [專案django_demo_01](<https://github.com/qinglian1105>) )。<br>
+首先，UiPath開啟應用程式「Docker Desktop」，然後啟動相關服務，如：前端網頁、後端API及資料庫…等( 詳見專案 [django_demo_01](<https://github.com/qinglian1105>) )。<br>
 
 (2)第2個Sequence「S_02-operation on webpages」<br>
 UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，如上述專案 ) ，接著輸入帳密登入進入首頁後，於左側side menu點選「信用評分預測(Credit Scorecards)」選單，即進入目標頁面如【圖02】所示，填完Form的 7 個變數資料，點擊按鍵「Predict Score」後，將於下方以藍色文字及儀表盤呈現預測結果(分數、評級)，由JavaScript程式擷取輸入資料及預測結果。<br>
@@ -54,7 +54,7 @@ UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，
 建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、JavaScript程式檔「demo_injectJS.js」、Python程式檔「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
 
 __以上，一個Web Automation例子展現UiPath與JavaScript、Python整合。__ <br>
-(相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 或 開源RPA [tagui_demo_01](<https://github.com/qinglian1105/tagui_demo_01>) 請參考)
+(相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 或 open-source RPA [tagui_demo_01](<https://github.com/qinglian1105/tagui_demo_01>) 請參考)
 <br><br><br>
 
 __3.UiPath Orchestrator Cloud 排程執行__ <br>
