@@ -4,3 +4,7 @@
 
 # Ignore folder_working
 folder_working/
+
+# Ignore .env files
+.env
+.env*

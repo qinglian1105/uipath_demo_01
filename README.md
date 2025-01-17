@@ -54,7 +54,8 @@ UiPath開啟瀏覽器(Microsoft Edge)，到一個網站( 127.0.0.1:7000/login，
 建構本Process之相關檔案，詳見UiPath流程主檔「Main.xaml」、JavaScript程式檔「demo_injectJS.js」、Python程式檔「processing_msg.py」及資料產出檔「predict_report.csv」。<br> 
 
 __以上，一個Web Automation例子展現UiPath與JavaScript、Python整合。__ <br>
-(個人相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 或 open-source RPA [tagui_demo_01](<https://github.com/qinglian1105/tagui_demo_01>) 、 [tagui_demo_02](<https://github.com/qinglian1105/tagui_demo_02>) 請參考)
+(個人相似專案 [power_automate_demo_01](<https://github.com/qinglian1105/power_automate_demo_01>) 或 open-source RPA [tagui_demo_01](<https://github.com/qinglian1105/tagui_demo_01>) 、 [tagui_demo_02](<https://github.com/qinglian1105/tagui_demo_02>) 請參考)<br>
+(網路爬蟲專案 [playwright_multitasking_demo_01](<https://github.com/qinglian1105/playwright_multitasking_demo_01>) 請參考)
 <br><br><br>
 
 __3.UiPath Orchestrator Cloud 排程執行__ <br>
